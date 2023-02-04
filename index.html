@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Game</title>
+</head>
+<body>
+     <figure class="intro" >
+        <video class="video" preload="none" autoplay="" muted="" loop="">
+            <source  id="myVideo"  src="./img/coverr-beautiful-rocky-shoreline-8352-1080p.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1>Website development. Emal: ytcenko1970@gmail.com</h1>
+            <p>Web site developer from Ukraine Yatsenko Vitaliy Viktorovich</p>
+            <!-- Use a button to pause/play the video with JavaScript -->
+            <button id="myBtn" onclick="myFunction()">Leave a message</button>
+          </div>
+    </figure> 
+    <div class="wrapper">
+        <div class="game">
+            <div class="game__body">
+                <div class="game__items">Your task is to dodge the blocks<br> Твоя задача увернутся от блоков
+                    <div class="game__result">
+                        Аront-end development Emal: ytcenko1970@gmail.com <span></span>
+                    </div>
+                </div>
+                <div class="game__counter"></div>
+            </div>
+            <div class="game__win">YOU WIN!!!</div>
+        </div>
+    </div>
+    <script>
+        // Get the video
+        var video = document.getElementById("myVideo");
+        
+        // Get the button
+        var btn = document.getElementById("myBtn");
+       //console.log(btn);
+        // Pause and play the video, and change the button text
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+        </script>
+        
+</body>
+</html>
